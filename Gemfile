@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| 'https://github.com/#{repo}.git' }
 
-ruby '2.5.1'
+ruby '2.5.7'
 
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'faker'
@@ -24,6 +24,7 @@ end
 
 group :production do
   gem 'pg'
+  gem 'dalli-elasticache'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
